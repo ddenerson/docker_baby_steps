@@ -10,7 +10,7 @@ you'll focus on two popular applications, Jenkins and Apache.
 
 ## Instructions:
 
-### Download The Images Jenkins and Apache
+### Download the Images Jenkins and Apache
 
 Use the following command: 
 
