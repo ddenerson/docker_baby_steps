@@ -3,7 +3,7 @@
 ![0*rmv6pZTW2hfP2XYd](https://user-images.githubusercontent.com/33932398/96685464-85076600-1353-11eb-9f1c-a83e340eaf42.png)
 
 
-## Managing images - download and delete
+## 1 - Managing images - download and delete
 
 The goal of this exercise is to familiarize you with downloading and deleting images. In this exercise,
 you'll focus on two popular applications, Jenkins and Apache.
