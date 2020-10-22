@@ -1,4 +1,4 @@
-#  Docker
+# Docker
 
 ![0*rmv6pZTW2hfP2XYd](https://user-images.githubusercontent.com/33932398/96685464-85076600-1353-11eb-9f1c-a83e340eaf42.png)
 
@@ -111,3 +111,10 @@ Deleted: sha256:b1ae7168c6f3e061aa3943740ec3ceaf8e582dc65feab31d2b56d464a5062d59
 Deleted: sha256:4a495dbc04bd205c728297a08cf203988e91caeafe4b21fcad94c893a53d96dc
 Deleted: sha256:3b10514a95bec77489a57d6e2fbfddb7ddfdb643907470ce5de0f1b05c603706
 </pre>
+
+
+----------------------------------------------------------------------------------------------------------------------
+## 2 - 
+
+
+
