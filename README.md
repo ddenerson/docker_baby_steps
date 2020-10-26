@@ -216,7 +216,8 @@ Some users of Docker use the “--rm”option frequently to help with garbage co
 
 # Logs
 
-### The “​docker logs​” command providers information directly from the “STDOUT” and "STDERR" ofa container.
+### The “​docker logs​” command providers information directly from the “STDOUT” 
+### and "STDERR" of a container.
 
 The format of the command is:
 
@@ -268,7 +269,8 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 <font color="#8AE234"><b>ddenerson@</b></font></pre>
 
 The hello-world image simply outputs some information and thenstops.
-It doesn't provide an on going service like other containers might.Now display the output of the container with timestamps:
+It doesn't provide an on going service like other containers might.
+Now display the output of the container with timestamps:
 
 <pre><font color="#8AE234"><b>@ddenerson</b></font>:<font color="#729FCF"><b>~</b></font>$ docker logs -t new_radis 
 2020-10-24T08:33:20.297717885Z 1:C 24 Oct 2020 08:33:20.297 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
