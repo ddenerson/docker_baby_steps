@@ -176,7 +176,8 @@ We should only see the one Redis container which received an arbitrary name from
 ## Automatically deleting a stopped container
 
 We will be using an image called “hello-world” which Docker uses for demonstrations sometimes.
-If you don’t have a copy of the image locally,Docker will will download it first before starting the container.
+If you don’t have a copy of the image locally,Docker will download it first before 
+starting the container.
 
 
 <pre><font color="#8AE234"><b>@ddenerson</b></font>:<font color="#729FCF"><b>~</b></font>$ docker run --rm hello-world
