@@ -270,7 +270,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 59ea99f87bde        debian              &quot;bash&quot;                   2 hours ago         Up About an hour                        bold_pasteur
 <font color="#8AE234"><b>ddenerson@</b></font></pre>
 
-The hello-world image simply outputs some information and thenstops.
+The hello-world image simply out puts some information and then stops.
 It doesn't provide an on going service like other containers might.
 Now display the output of the container with timestamps:
 
