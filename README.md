@@ -122,7 +122,8 @@ To familiarize yourself with the various options for the “docker run” comman
 
 ### Start a Container
 
-We will begin by starting up a container with a simple “​docker run​” command using the popularkey-value database, Redis:
+We will begin by starting up a container with a simple “​docker run​” command using 
+the popularkey-value database, Redis:
 
 <pre><font color="#8AE234"><b>@ddenerson</b></font>:<font color="#729FCF"><b>~</b></font>$ docker run -dit redis
 90994cda2eb9ce67033fb1f370e609745b6ef92b6f55c4991c187abd65a19c51
