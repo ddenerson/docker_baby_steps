@@ -398,13 +398,13 @@ Most often, you'll want to connect to a container that is already running.
 First, start a container named "exec_command_redis" based on the "redis" image.
 Run it in thebackground
 
-<pre>enerson:~# docker run -dit --name exec_command_redis redis
+<pre>denerson:~# docker run -dit --name exec_command_redis redis
 a968f4af46c444f921e9c3b93afeb328d91a99b59b4b71388310d64ad60d1aa4
 </pre>
 
 Check that it’s running properly after starting it detached
 
-<pre>root@denerson:~# docker ps
+<pre>denerson:~# docker ps
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
 a968f4af46c4        redis               &quot;docker-entrypoint.s…&quot;   2 minutes ago       Up 2 minutes  </pre>
 
