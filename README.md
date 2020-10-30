@@ -388,7 +388,7 @@ There is NO WARRANTY, to the extent permitted by law.</pre>
 
 Confirm that the container stopped.
 
-<pre>root@denerson:~# docker ps -a
+<pre>denerson:~# docker ps -a
 CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
 04a1a18d3d87        redis               &quot;docker-entrypoint.s…&quot;   11 minutes ago      Exited (0) 32 second</pre>
 
