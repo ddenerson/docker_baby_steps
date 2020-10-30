@@ -311,11 +311,13 @@ Now display the output of the container with timestamps:
 
 ## Goal:
 
-The goal of this exercise to expose the port of a container to the outside world.  For this exercise,you will use the Apache HTTP Server.
+The goal of this exercise to expose the port of a container to the outside world.
+For this exercise,you will use the Apache HTTP Server.
 
 ### Instructions: Start a Container Using the Apache HTTP Server Image
 
-The image name for the Apache HTTP Server is "httpd."  Start an image named "apache_welcome"using the "httpd" image.Use port 9900 on the docker host system to communicate with port 80 onthe container.
+The image name for the Apache HTTP Server is "httpd."Start an image named "apache_welcome"using the "httpd" image.
+Use port 9900 on the docker host system to communicate with port 80 onthe container.
 
 <pre>@denerson:~# docker run --name apache_welcome -d -p 9900:80 httpd
 Unable to find image &apos;httpd:latest&apos; locally
