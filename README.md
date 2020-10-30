@@ -343,6 +343,75 @@ e6b453fef5a6        httpd               &quot;httpd-foreground&quot;   4 minutes
 <pre>@denerson:~# curl http://localhost:9900
 &lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
 </pre>
+--------------------------------------------------------------------------------------------------------------
+# 4 - Entering Containers Exercise
+
+## Goal
+
+The goal of this exercise is to practice the two common ways of entering a container.
+The firstmethod that you'll practice is entering the container at runtime.
+The second method you'll practiceis entering or connecting to a container 
+that is already running. In practice, you'll find the secondmethod to be 
+the one you'll use most often.
+
+### Instructions: Enter a Container at Runtime
+
+Launch a container based on the "redis" image and start an interactive shell.
+Name the container"enter_redis" and run the container in the foreground.
+
+<pre>denerson:~# docker run -it --name enter_redis redis /bin/bash
+Unable to find image &apos;redis:latest&apos; locally
+latest: Pulling from library/redis
+bb79b6b2107f: Already exists 
+1ed3521a5dcb: Pull complete 
+5999b99cee8f: Pull complete 
+dd17877d8f2d: Pull complete 
+4863b56b12a8: Pull complete 
+069e700bc397: Pull complete 
+Digest: sha256:a0494b60a0bc6de161d26dc2d2f9d2f1c5435e86a9e5d48862a161131affa6bd
+Status: Downloaded newer image for redis:latest
+</pre>
+
+Following that command, you are presented with a prompt that contains a username,
+a hostname,and a path.
+This most likely means that the Bash shell is available to you as opposed to 
+ban older,simpler shell.
+
+
+<pre>root@04a1a18d3d87:/data# bash --version
+GNU bash, version 5.0.3(1)-release (x86_64-pc-linux-gnu)
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;
+
+This is free software; you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.</pre>
+
+Confirm that the container stopped.
+
+<pre>root@denerson:~# docker ps -a
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS                        PORTS               NAMES
+04a1a18d3d87        redis               &quot;docker-entrypoint.s…&quot;   11 minutes ago      Exited (0) 32 second</pre>
+
+## Enter a Running Container
+
+Most often, you'll want to connect to a container that is already running.
+First, start a container named "exec_command_redis" based on the "redis" image.
+Run it in thebackground
+
+<pre>enerson:~# docker run -dit --name exec_command_redis redis
+a968f4af46c444f921e9c3b93afeb328d91a99b59b4b71388310d64ad60d1aa4
+</pre>
+
+Check that it’s running properly after starting it detached
+
+<pre>root@denerson:~# docker ps
+CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS               NAMES
+a968f4af46c4        redis               &quot;docker-entrypoint.s…&quot;   2 minutes ago       Up 2 minutes  </pre>
+
+Enter the container by running the bash shell.  Remember, that you'll need the "-it" option to do.
+
+<pre>denerson:~# docker exec -it exec_command_redis /bin/bash
+root@a968f4af46c4:/data#</pre>
 
 
 
