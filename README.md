@@ -306,6 +306,41 @@ Now display the output of the container with timestamps:
 2020-10-24T08:37:29.784790053Z 1:M 24 Oct 2020 08:37:29.784 * DB saved on disk
 2020-10-24T08:37:29.784828194Z 1:M 24 Oct 2020 08:37:29.784 # Redis is now ready to exit, bye bye...
 <font color="#8AE234"><b>ddenerson</b></font></pre>
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+# 3 - Making a Container Publicly Available
+
+## Goal:
+
+The goal of this exercise to expose the port of a container to the outside world.  For this exercise,you will use the Apache HTTP Server.
+
+### Instructions: Start a Container Using the Apache HTTP Server Image
+
+The image name for the Apache HTTP Server is "httpd."  Start an image named "apache_welcome"using the "httpd" image.Use port 9900 on the docker host system to communicate with port 80 onthe container.
+
+<pre>@denerson:~# docker run --name apache_welcome -d -p 9900:80 httpd
+Unable to find image &apos;httpd:latest&apos; locally
+latest: Pulling from library/httpd
+bb79b6b2107f: Pull complete 
+26694ef5449a: Pull complete 
+7b85101950dd: Pull complete 
+da919f2696f2: Pull complete 
+3ae86ea9f1b9: Pull complete 
+Digest: sha256:b82fb56847fcbcca9f8f162a3232acb4a302af96b1b2af1c4c3ac45ef0c9b968
+Status: Downloaded newer image for httpd:latest
+e6b453fef5a61e2fd4380509e6e2922264ab9bd0df61f58b2c4bbe54290c5332</pre>
+
+### Confirm the Port is Open
+
+<pre>@denerson:~# docker ps
+CONTAINER ID        IMAGE               COMMAND              CREATED             STATUS              PORTS                  NAMES
+e6b453fef5a6        httpd               &quot;httpd-foreground&quot;   4 minutes ago       Up 4 minutes        0.0.0.0:9900-&gt;80/tcp   apache_welcome
+</pre>
+
+### View the application
+
+<pre>@denerson:~# curl http://localhost:9900
+&lt;html&gt;&lt;body&gt;&lt;h1&gt;It works!&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;
+</pre>
 
 
 
